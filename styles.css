@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/*────────────────── 
+       Background Image
+──────────────────*/
+body::before {
+  content: "";
+  position: fixed;
+  background:url("/bg.png") top right no-repeat;
+  background-size: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+
+:root{
+	--main-background: #0b0c0f;
+	--main-fonts-color: #fff;
+	--main-decor-color:#0035e2;
+    --main-header-background:#00288657;
+	--main-font-family: 'Poppins', sans-serif;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+main{
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--main-background);
+}
+
+/*────────────────── 
+       header
+──────────────────*/
+
+header{
+	margin: 0 auto;
+	width: 100%;
+	height: 70px;
+	display: flex;
+    align-items: center; 
+    justify-content: normal;
+    background: transparent;
+	position: fixed;
+	top: 0;
+	transition: 0.3s;
+	z-index: 5;
+}
+.nav-show{
+	opacity: 0;
+}
+
+header:hover{
+	opacity: 1;
+	background: var(--main-header-background);
+}
+
+.logo img{
+	padding-top: 5px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.nav-bar{
+	list-style:none;
+	position: relative;
+	display: inline-flex;
+}
+
+a.nav-link{
+	margin: 2px;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.active{
+	background: var(--main-decor-color);
+}
+
+.nav-link:hover {
+	color: #e9e9e9;
+    background: var(--main-decor-color);
+}
+
+.hamburger {
+  display: none; /* Hide by default on all screens */
+  cursor: pointer;
+}
+
+.navbar {
+  display: none; /* Show by default on all screens */
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+  .hamburger {
+      display: block; /* Show on smaller screens */
+  }
+
+  .navbar {
+      display: none; /* Hide on smaller screens */
+  }
+}
+
+/*────────────────── 
+     Scrollbar
+──────────────────*/
+::-webkit-Scrollbar{
+  width: 5px; 
+background: rgba(5,5,5,1);
+}
+::-webkit-Scrollbar-thumb{
+border-radius: 10px;
+background: var(--main-decor-color);
+box-shadow: inset 0 0 20px var(--main-decor-color);
+}
+::-webkit-Scrollbar-track{
+margin-top: 80px;
+border-radius: 10px;
+}
+ 
+/*────────────────── 
+      Opening Transition
+──────────────────*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff00; /* Background color of the loading page */
+}
+  
+/*──────────────────
+       home
+──────────────────*/
+
+#home {
+  position: relative;
+  margin: auto;
+  height: 100vh;
+  color: var(--main-fonts-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#home .filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.20;
+}
+
+.intro {
+  text-align: center;
+  color: var(--main-fonts-color);
+  z-index: 1;
+  margin: auto;
+}
+
+.intro p {
+  margin: 5px;
+  font-size: 1.2rem;
+  font-family: var(--main-font-family);
+  text-align: right;
+  padding-bottom: 10px;
+}
+
+h5 {
+  padding-bottom: 10px;
+  letter-spacing: normal;
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-size: 60px;
+  color: var(--main-fonts-color);
+  text-shadow: 0px 0px 40px var(--main-decor-color);
+}
+
+.radius-box {
+  font-size: medium;
+  width: 150px;
+  height: 40px;
+  background-color: rgb(0, 132, 255);
+  border-radius: 10px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease; /* Add smooth transition for the background color */
+}
+
+.radius-box:hover {
+  background-color: rgb(0, 102, 204); /* Change the background color on hover */
+}
+
+/*────────────────── 
+      home: heading, descriptions style 
+──────────────────*/
+
+h1.fw-bold {
+    font-weight: 700!important;
+    padding: 10pxwd;
+    color: #ffffff;
+}
+h2.fw-bold {
+    font-weight: 700!important;
+    color: #73a2ff;
+    font-size: medium;
+}
+
+body.p-3 {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Container Styles */
+.container-flex {
+    background-color: #00165f83;
+    border-radius: 15px; 
+    text: #919191;
+}
+
+.card {
+    padding: 20px;
+    color: black;
+}
+.card-title{
+  font-size: large;
+}
+
+.accordion-button {
+    background-color: #161616c4;
+}
+
+.button.accordion-button {
+    background-color: #b4b4b400;
+}
+
+.accordion-item {
+    background-color: #161616c4;
+}
+
+
+/* Button Styles */
+.btn-primary {
+    background: #007bff00;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: #003eb3;
+    border-color: #44444400;
+}
+
+/* Input Styles */
+input#id,
+input#season,
+input#episode {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+}
+
+/* Text Styles */
+.text-info {
+    color: #a5a5a5;
+}
+
+/* Heading Styles */
+h1.fw-bold.fst-italic,
+h2.fst-italic {
+    color: #cecece;
+}
+h3 {
+   text-shadow: 0px 0px 40px var(--main-decor-color);
+    color: #bfc0c2;
+}
+
+
+body.p-3 {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa6e;
+}
+
+/* Accordion Styles */
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion-button {
+    background-color: #007bff;
+    color: #ffffff6e;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.accordion-collapse {
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #d4d6da;
+}
+
+input#q_field {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: #0055f3;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*  Contact  */
+#portfolio,
+#contact{
+	margin: auto;
+	padding-bottom: 20px;
+	height: 900px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--main-fonts-color);
+}
+#portfolio p,
+#contact p{
+	padding:10px;
+	text-align:center;
+	font-size:1.2rem;
+	font-family: 'Arial', sans-serif;;
+}
+
+
+#portfolio {
+  height: 2400px;
+}
+
+@media only screen and (max-width: 600px) {
+  .bigcard {
+  width: 400px;
+  }
+
+  #portfolio {
+    height: 4000px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .bigcard {
+  width: 200px;
+}
+}
+#contact {
+    background-color: var(--main-background);
+}
+
+.credits {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+  text-align: right;
+  font-size: 13px;
+  color: #fff;
+  z-index: 999999;
+}
+
+@media (max-width: 992px) {
+  .credits {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.credits a {
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.credits a:hover {
+  color: #007bff;
+}
