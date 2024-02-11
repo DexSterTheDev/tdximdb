@@ -1,6 +1,5 @@
 # Free Movie and TV Show Streaming Website
 
-### Video Demo: https://youtu.be/ZdbZgsT-24k
 
 ### Description:
 This is a website that allows users to watch movies and TV shows for free.   
